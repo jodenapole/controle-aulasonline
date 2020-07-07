@@ -1,0 +1,112 @@
+<div class="form-item">
+                <div>Insira uma imagem</div>
+                <div>
+                    <input
+                    type="url"
+                    name="avatar_url"
+                    placeholder="https://"
+                    value="{{teacher.avatar_url}}"
+                    required>
+                </div>
+            </div>
+
+            <div class="form-item">
+                <div>Insira seu nome</div>
+                <div>
+                    <input
+                    type="text"
+                    name="name"
+                    placeholder="Insira aqui seu nome"
+                    value="{{teacher.name}}"
+                    required>
+                </div>
+            </div>
+
+            <div class="form-item">
+                <div>Insira sua data de nascimento</div>
+                <div>
+                    <input
+                    type="date"
+                    name="birth_date"
+                    value="{{instructor.birth_date}}"
+                    required>
+                </div>
+            </div>
+
+            <div class="form-item">
+                <div>Escolha seu grau de escolaridade</div>
+                <div>
+                    <select name="school_level" required>
+                        <option
+                            value="Ensino Médio"
+                            {% if teacher.school_level == "Ensino Médio" %}
+                            selected
+                            {% endif %}>
+                            Ensino Médio
+                        </option>
+
+                        <option
+                            value="Ensino Superior"
+                            {% if teacher.school_level == "Ensino Superior" %}
+                            selected
+                            {% endif %}>
+                            Ensino Superior
+                        </option>
+
+                        <option
+                            value="Mestrado"
+                            {% if teacher.school_level == "Mestrado" %}
+                            selected
+                            {% endif %}>
+                            Mestrado
+                        </option>
+
+                        <option
+                            value="Doutorado"
+                            {% if teacher.school_level == "Doutorado" %}
+                            selected
+                            {% endif %}>
+                            Doutorado
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-item">
+                <div>Escolha sua forma de lecionar</div>
+                <div>
+                    <span>
+                        <input
+                        type="radio"
+                        name="teaching_type"
+                        value="Presencial"
+                        {% if teacher.teaching_type == "Presencial" %}
+                        checked
+                        {% endif %}>
+                        Presencial
+                    </span>
+                    <span>
+                        <input
+                        type="radio"
+                        name="teaching_type"
+                        value="EaD"
+                        {% if teacher.teaching_type == "EaD" %}
+                        checked
+                        {% endif %}>
+                        A Distância
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-item">
+                <div>Insira quais matérias você leciona</div>
+                <div>
+                    <input
+                    type="text"
+                    name="class_type"
+                    placeholder="Separado por vírgula. Ex: Matemática, Português"
+                    value="{{teacher.class_type}}">
+                </div>
+            </div>
+
+            <button type="submit">Salvar</button>

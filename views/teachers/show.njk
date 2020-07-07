@@ -1,0 +1,49 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Professores</title>
+{% endblock head %}
+
+{% block content %}
+    <div class="card">
+        <section class="image" style="background: url(https://source.unsplash.com/collection/517198/500x500) no-repeat center center / cover"></section>
+        <section class="details">
+
+            <h3>Informações</h3>
+
+            <div class="info">
+                <div>Professore</div>
+                <div>{{teacher.name}}</div>
+            </div>
+
+            <div class="info">
+                <div>Idade</div>
+                <div>{{teacher.age}}</div>
+            </div>
+
+            <div class="info">
+                <div>Grau de Escolaridade</div>
+                <div>{{teacher.school_level}}</div>
+            </div>
+
+            <div class="info">
+                <div>Forma de aula</div>
+                <div>{{teacher.teaching_type}}</div>
+            </div>
+
+            <div class="info">
+                <div>Disciplinas</div>
+                <div>
+                    {% for class_type in teacher.class_type %}
+                    <span>{{class_type}}</span>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="info">
+                <div>Desde</div>
+                <div>{{teacher.created_at}}</div>
+            </div>
+        </section>
+    </div>
+{% endblock content %}

@@ -1,0 +1,66 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/create-point.css">
+    <title>Crie seu cartão</title>
+{% endblock head %}
+
+{% block content %}
+    <div class="form-card">
+        
+        <form class="creation-form" method="post" action="/teachers" >
+        <section class="form-items">
+            <h3>Crie seu perfil</h3>
+            <div class="form-item">
+                <div>Insira uma imagem</div>
+                <div>
+                    <input type="url" name="avatar_url" placeholder="https://" required>
+                </div>
+            </div>
+
+            <div class="form-item">
+                <div>Insira seu nome</div>
+                <div>
+                    <input type="text" name="name" placeholder="Insira aqui seu nome" required>
+                </div>
+            </div>
+
+            <div class="form-item">
+                <div>Insira sua data de nascimento</div>
+                <div>
+                    <input type="date" name="birth_date" required>
+                </div>
+            </div>
+
+            <div class="form-item">
+                <div>Escolha seu grau de escolaridade</div>
+                <div>
+                    <select name="school_level" required>
+                        <option value="Ensino Médio">Ensino Médio</option>
+                        <option value="Ensino Superior">Ensino Superior</option>
+                        <option value="Mestrado">Mestrado</option>
+                        <option value="Doutorado">Doutorado</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-item">
+                <div>Escolha sua forma de lecionar</div>
+                <div>
+                    <span><input type="radio" name="teaching_type" value="Presencial" checked>Presencial</span>
+                    <span><input type="radio" name="teaching_type" value="EaD">A Distância</span>
+                </div>
+            </div>
+
+            <div class="form-item">
+                <div>Insira quais matérias você leciona</div>
+                <div>
+                    <input type="text" name="class_type" placeholder="Separado por vírgula. Ex: Matemática, Português">
+                </div>
+            </div>
+
+            <button type="submit">Salvar</button>
+            </section>
+        </form>
+    </div>
+{% endblock content %}

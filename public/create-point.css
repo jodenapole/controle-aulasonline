@@ -1,0 +1,57 @@
+.form-card{
+    background-color: #fff;
+    width: 600px;
+    min-height: 400px;
+    margin: 40px auto;
+    box-shadow: 1px 1px 3px -1px rgba(0, 0, 0, 1);
+    animation: up 300ms ease-in-out;
+}
+
+.form-items{
+    max-width: 380px;
+    margin: 0px auto;
+}
+
+.form-items h3{
+    padding-top: 16px;
+    letter-spacing: 2px;
+}
+
+.form-item{
+    padding: 32px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.form-item div:nth-child(1){
+    margin-bottom: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.form-item input, select{
+    outline: rgba(0, 0, 0, 0.4);
+    border: 1px solid;
+    padding: 4px;
+    width: 300px;;
+}
+
+.form-item span input{
+    width: 30px;
+    display: inline-block;
+}
+
+button{
+    margin: 32px 0;
+    background-color: #cecece;
+    padding: 16px;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+

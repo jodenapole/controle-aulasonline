@@ -1,0 +1,23 @@
+{
+  "teachers": [
+    {
+      "avatar_url": "https://google.com",
+      "name": "Jo de Napole Arruda Dias",
+      "birth_date": 951868800000,
+      "school_level": "Ensino Superior",
+      "teaching_type": "EaD",
+      "class_type": "HTML, CSS, Javascript",
+      "id": null
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://google.com",
+      "name": "Cléo Almeida",
+      "birth_date": 1007596800000,
+      "school_level": "Ensino Superior",
+      "teaching_type": "Presencial",
+      "class_type": "Biologia, Genética",
+      "created_at": 1594151207728
+    }
+  ]
+}

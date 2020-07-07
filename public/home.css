@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root{
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body{
+    background-color: #cecece;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilização do Header */
+
+header{
+    width: 100%;
+    padding: 32px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.links{
+    text-align: center;
+    font-size: 28px;
+}
+
+.links a{
+    text-decoration: none;
+    color: #1f1f1f;
+    position: relative;
+}
+
+.links a.active{
+    font-weight: bold;
+}
+
+.links a + a{
+    margin-left: 32px;
+}
+
+.links a::after{
+    content: "";
+    background-color: black;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+}
+
+.links a:hover::after{
+    width: 100%;
+    transition: width 200ms ease-in-out;
+}
+
+/* Estilização do card central */
+
+.card{
+    background-color: #fff;
+    width: 800px;
+    min-height: 400px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    box-shadow: 1px 1px 3px -1px rgba(0, 0, 0, 1);
+    animation: up 300ms ease-in-out;
+}
+
+@keyframes up{
+    from{
+        opacity: 0;
+        transform: rotateX(45deg);
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+.details{
+    margin-left: 16px;
+    padding: 24px;
+}
+
+.details h3{
+    letter-spacing: -1px;
+    font-weight: 500;
+}
+
+.details .info{
+    border-bottom: 2px solid #cecece;
+    margin-top: 16px;
+    padding-bottom: 16px;
+}
+
+.details .info:last-child{
+    border-bottom: none;
+}
+
+.details .info div:nth-child(1){
+    font-size: 12px;
+    color: #777;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.details .info div:nth-child(2){
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.details .info span{
+    background-color: green;
+    padding: 8px;
+    border-radius: 8px;
+    margin-top: 8px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 12px;
+}

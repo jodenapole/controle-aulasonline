@@ -1,0 +1,22 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/create-point.css">
+    <title>Edite seu cartão</title>
+{% endblock head %}
+
+{% block content %}
+
+ <div class="form-card">
+        
+        <form class="creation-form" method="POST" action="/teachers?_method=PUT" >
+        <section class="form-items">
+
+            <h3>Editar Cartão de Professor</h3>
+
+            {%include "teachers/form-fields.njk"%}
+
+        </section>
+        </form>
+
+{% endblock content %}
